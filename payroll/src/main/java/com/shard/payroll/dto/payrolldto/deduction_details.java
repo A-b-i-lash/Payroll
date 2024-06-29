@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class deduction_details {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long  id;
+    private int  id;
 
     // Deductions
     private int advance_payment;

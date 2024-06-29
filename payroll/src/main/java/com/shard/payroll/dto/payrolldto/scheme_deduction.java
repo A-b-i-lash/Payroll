@@ -6,13 +6,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class payment_details {
-    @Id
+public class scheme_deduction {
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  id;
-    private String payment_mode;
-    private String payment_bank_name;
-    private String payment_bank_account_number;
-    private String payment_bank_ifsc_code;
+    private int provident_fund;
+    private int esi;
+    private int professional_tax;
+    private int welfare_fund;
 
 }

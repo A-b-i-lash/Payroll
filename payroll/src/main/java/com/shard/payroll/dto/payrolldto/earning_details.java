@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class earning_details {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long  id;
+    private int  id;
     // Earnings
     private int basic_salary;
     private int hra_allowance;
