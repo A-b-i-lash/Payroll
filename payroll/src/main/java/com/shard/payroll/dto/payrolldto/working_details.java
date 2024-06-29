@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class working_details {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long  id;
+    private int  id;
     private String number_of_workingdays;
     private String number_of_leavedays;
     private String number_of_loss_of_pay;

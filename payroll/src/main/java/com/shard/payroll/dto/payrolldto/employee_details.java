@@ -9,6 +9,12 @@ import jakarta.persistence.Id;
 public class employee_details {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long  id;
+    private int  id;
+    private String employee_code;
+    private String employee_name;
+    private String doj;
+    private String designation;
+    private String department;
+    private String work_location;
 
 }
