@@ -6,16 +6,18 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class earning_details {
+public class DeductionDetailsDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  id;
-    // Earnings
-    private int basic_salary;
-    private int hra_allowance;
-    private int medical_reimbursement;
-    private int communication_allowance;
-    private int lta_allowance;
-    private int special_allowance;
-    private int incentive_allowance;
+
+    // Deductions
+    private int advance_payment;
+    private int damage_payment;
+
+    // Scheme Deduction
+    private int provident_fund;
+    private int esi;
+    private int professional_tax;
+    private int welfare_fund;
 }

@@ -6,18 +6,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class deduction_details {
+public class PaymentDetailsDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  id;
+    private String payment_mode;
+    private String payment_bank_name;
+    private String payment_bank_account_number;
+    private String payment_bank_ifsc_code;
 
-    // Deductions
-    private int advance_payment;
-    private int damage_payment;
-
-    // Scheme Deduction
-    private int provident_fund;
-    private int esi;
-    private int professional_tax;
-    private int welfare_fund;
 }

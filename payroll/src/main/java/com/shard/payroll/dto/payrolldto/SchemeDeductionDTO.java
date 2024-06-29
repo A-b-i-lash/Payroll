@@ -6,12 +6,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class other_deduction {
+public class SchemeDeductionDTO {
      @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  id;
+    private int provident_fund;
+    private int esi;
+    private int professional_tax;
+    private int welfare_fund;
 
-    // Deductions
-    private int advance_payment;
-    private int damage_payment;
 }

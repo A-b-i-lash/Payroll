@@ -6,13 +6,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class payment_details {
+public class EmployeeDetailsDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  id;
-    private String payment_mode;
-    private String payment_bank_name;
-    private String payment_bank_account_number;
-    private String payment_bank_ifsc_code;
+    private String employee_code;
+    private String employee_name;
+    private String doj;
+    private String designation;
+    private String department;
+    private String work_location;
 
 }

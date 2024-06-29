@@ -6,14 +6,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class working_details {
+public class SalaryDetailsDTO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  id;
-    private String number_of_workingdays;
-    private String number_of_leavedays;
-    private String number_of_loss_of_pay;
-    private String number_of_sufficient_leave;
-    private String number_of_remaining_sufficient_leave_days;
-
+    private int total_earnings;
+    private int total_deductons;
+    private int net_salary;
 }
