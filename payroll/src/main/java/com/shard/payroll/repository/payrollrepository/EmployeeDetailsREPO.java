@@ -7,4 +7,5 @@ import com.shard.payroll.dto.payrolldto.EmployeeDetailsDTO;
 public interface EmployeeDetailsREPO extends JpaRepository<EmployeeDetailsDTO ,Integer>{
 
 
+
 }
