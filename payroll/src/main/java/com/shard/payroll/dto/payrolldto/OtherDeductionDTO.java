@@ -14,4 +14,22 @@ public class OtherDeductionDTO {
     // Deductions
     private int advance_payment;
     private int damage_payment;
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getAdvance_payment() {
+        return advance_payment;
+    }
+    public void setAdvance_payment(int advance_payment) {
+        this.advance_payment = advance_payment;
+    }
+    public int getDamage_payment() {
+        return damage_payment;
+    }
+    public void setDamage_payment(int damage_payment) {
+        this.damage_payment = damage_payment;
+    }
 }
