@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @CrossOrigin
-@RequestMapping("/api")
+@RequestMapping("/Api/Employee")
 public class EmployeeDetailsController {
 
     @Autowired
@@ -46,12 +46,12 @@ public class EmployeeDetailsController {
     private ViewAllEmployeeDetails daoViewAll;
 
     @PostMapping("Add")
-    public EmployeeDetailsDTO saveEmployee(@RequestBody EmployeeDetailsDTO add) {  
-        return daoAdd.saveEmployee(add);
+    public EmployeeDetailsDTO SaveEmployee(@RequestBody EmployeeDetailsDTO add) {  
+        return daoAdd.SaveEmployee(add);
     }
 
     @PutMapping("Update/{id}")
-    public EmployeeDetailsDTO updateEmployee(@PathVariable Integer id, @RequestBody EmployeeDetailsDTO update ) {
+    public EmployeeDetailsDTO UpdateEmployee(@PathVariable Integer id, @RequestBody EmployeeDetailsDTO update ) {
         return daoUpdate.update(id , update);
     }
     

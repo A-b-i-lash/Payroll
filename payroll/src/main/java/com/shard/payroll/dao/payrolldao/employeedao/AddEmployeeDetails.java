@@ -12,7 +12,7 @@ public class AddEmployeeDetails {
     @Autowired
     private  EmployeeDetailsREPO repo;
 
-    public EmployeeDetailsDTO saveEmployee(@RequestBody EmployeeDetailsDTO add){
+    public EmployeeDetailsDTO SaveEmployee(@RequestBody EmployeeDetailsDTO add){
         return repo.save(add);
     }
 

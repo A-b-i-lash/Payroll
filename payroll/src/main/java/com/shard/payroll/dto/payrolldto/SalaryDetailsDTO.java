@@ -11,17 +11,11 @@ public class SalaryDetailsDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  id;
     private int total_earnings;
-    private int total_deductons;
+    private int total_deductions;
     private int net_salary;
     private String month;
     public int getId() {
         return id;
-    }
-    public String getMonth() {
-        return month;
-    }
-    public void setMonth(String month) {
-        this.month = month;
     }
     public void setId(int id) {
         this.id = id;
@@ -32,11 +26,11 @@ public class SalaryDetailsDTO {
     public void setTotal_earnings(int total_earnings) {
         this.total_earnings = total_earnings;
     }
-    public int getTotal_deductons() {
-        return total_deductons;
+    public int getTotal_deductions() {
+        return total_deductions;
     }
-    public void setTotal_deductons(int total_deductons) {
-        this.total_deductons = total_deductons;
+    public void setTotal_deductions(int total_deductions) {
+        this.total_deductions = total_deductions;
     }
     public int getNet_salary() {
         return net_salary;
@@ -44,4 +38,12 @@ public class SalaryDetailsDTO {
     public void setNet_salary(int net_salary) {
         this.net_salary = net_salary;
     }
+    public String getMonth() {
+        return month;
+    }
+    public void setMonth(String month) {
+        this.month = month;
+    }
+    
+    
 }
