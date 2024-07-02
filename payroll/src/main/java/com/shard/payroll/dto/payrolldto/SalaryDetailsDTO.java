@@ -1,9 +1,14 @@
 package com.shard.payroll.dto.payrolldto;
 
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class SalaryDetailsDTO {
@@ -14,6 +19,16 @@ public class SalaryDetailsDTO {
     public int total_deductions;
     private int net_salary;
     private String month;
+
+    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+    private EmployeeDetailsDTO employeeDetailsDTO;
+
+    public EmployeeDetailsDTO getEmployeeDetailsDTO() {
+        return employeeDetailsDTO;
+    }
+    public void setEmployeeDetailsDTO(EmployeeDetailsDTO employeeDetailsDTO) {
+        this.employeeDetailsDTO = employeeDetailsDTO;
+    }
     public int getId() {
         return id;
     }
