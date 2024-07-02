@@ -12,7 +12,7 @@ public class UpdateEmployeeDetails {
     @Autowired
     private  EmployeeDetailsREPO repo;
 
-    public EmployeeDetailsDTO update(@RequestBody  int id , EmployeeDetailsDTO update){
+    public EmployeeDetailsDTO UpdateEmployee(@RequestBody  int id , EmployeeDetailsDTO update){
         update.setId(id);
         return repo.save(update);
     }

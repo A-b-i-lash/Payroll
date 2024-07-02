@@ -14,7 +14,7 @@ public class AddSalaryDetails {
 
 
 
-    public SalaryDetailsDTO SaveSalary(@RequestBody SalaryDetailsDTO add){
+    public SalaryDetailsDTO AddSalary(@RequestBody SalaryDetailsDTO add){
         int Sum = add.getTotal_deductions() - add.getTotal_earnings();
         add.setNet_salary(Sum);
         System.out.println(Sum);

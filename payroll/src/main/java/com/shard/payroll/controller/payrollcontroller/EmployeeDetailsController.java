@@ -46,23 +46,23 @@ public class EmployeeDetailsController {
     private ViewAllEmployeeDetails daoViewAll;
 
     @PostMapping("Add")
-    public EmployeeDetailsDTO SaveEmployee(@RequestBody EmployeeDetailsDTO add) {  
-        return daoAdd.SaveEmployee(add);
+    public EmployeeDetailsDTO AddEmployee(@RequestBody EmployeeDetailsDTO add) {  
+        return daoAdd.AddEmployee(add);
     }
 
     @PutMapping("Update/{id}")
     public EmployeeDetailsDTO UpdateEmployee(@PathVariable Integer id, @RequestBody EmployeeDetailsDTO update ) {
-        return daoUpdate.update(id , update);
+        return daoUpdate.UpdateEmployee(id , update);
     }
     
     @DeleteMapping("Delete/{id}")
     public String DeleteEmployee(@PathVariable Integer id){
-        return daoDelete.Delete(id);
+        return daoDelete.DeleteEmployee(id);
     }
 
     @GetMapping("View/{id}")
     public EmployeeDetailsDTO ViewEmployee(@PathVariable Integer id) {
-        return daoView.View(id);
+        return daoView.ViewEmployee(id);
     }
 
     @GetMapping("ViewAll")

@@ -11,7 +11,7 @@ public class DeleteEmployeeDetails {
     @Autowired
     private EmployeeDetailsREPO repo;
 
-    public String Delete(@RequestBody int id){
+    public String DeleteEmployee(@RequestBody int id){
         repo.deleteById(id);
         return "sucess";
     }

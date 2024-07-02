@@ -11,7 +11,7 @@ public class ViewEmployeeDetails {
     @Autowired
     private EmployeeDetailsREPO repo;
 
-    public EmployeeDetailsDTO View(int id){
+    public EmployeeDetailsDTO ViewEmployee(int id){
         return repo.findById(id).get();
     }
 
