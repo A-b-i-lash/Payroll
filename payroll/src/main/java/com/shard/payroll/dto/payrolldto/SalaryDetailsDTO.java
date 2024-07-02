@@ -11,7 +11,7 @@ public class SalaryDetailsDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  id;
     private int total_earnings;
-    private int total_deductions;
+    public int total_deductions;
     private int net_salary;
     private String month;
     public int getId() {
@@ -26,7 +26,7 @@ public class SalaryDetailsDTO {
     public void setTotal_earnings(int total_earnings) {
         this.total_earnings = total_earnings;
     }
-    public int getTotal_deductions() {
+    public  int getTotal_deductions() {
         return total_deductions;
     }
     public void setTotal_deductions(int total_deductions) {
