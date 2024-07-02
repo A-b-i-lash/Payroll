@@ -1,15 +1,13 @@
 package com.shard.payroll.dto.payrolldto;
 
 
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToOne;
+
+
 
 @Entity
 public class SalaryDetailsDTO {
@@ -21,36 +19,6 @@ public class SalaryDetailsDTO {
     private int net_salary;
     private String month;
 
-    @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-    private EmployeeDetailsDTO employeeDetailsDTO;
-
-
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "total_ded",nullable = false,referencedColumnName = "total_deduction")
-    // @Column(name = "sal")
-    public DeductionDetailsDTO deductionDetailsDTO;
-
-
-     // On Customer class:
-
-    // @OneToOne(optional=false)
-    // @JoinColumn(
-    //     name="CUSTREC_ID", unique=true, nullable=false, updatable=false)
-    // public CustomerRecord getCustomerRecord() { return customerRecord; }
-
-    // // On CustomerRecord class:
-
-    // @OneToOne(optional=false, mappedBy="customerRecord")
-    // public Customer getCustomer() { return customer; }
-
-
-
-    public EmployeeDetailsDTO getEmployeeDetailsDTO() {
-        return employeeDetailsDTO;
-    }
-    public void setEmployeeDetailsDTO(EmployeeDetailsDTO employeeDetailsDTO) {
-        this.employeeDetailsDTO = employeeDetailsDTO;
-    }
     public int getId() {
         return id;
     }
@@ -81,12 +49,7 @@ public class SalaryDetailsDTO {
     public void setMonth(String month) {
         this.month = month;
     }
-    public DeductionDetailsDTO getDeductionDetailsDTO() {
-        return deductionDetailsDTO;
-    }
-    public void setDeductionDetailsDTO(DeductionDetailsDTO deductionDetailsDTO) {
-        this.deductionDetailsDTO = deductionDetailsDTO;
-    }
-    
+
     
 }
+

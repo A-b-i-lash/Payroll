@@ -1,12 +1,11 @@
 package com.shard.payroll.dto.payrolldto;
 
-import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+
 
 @Entity
 public class DeductionDetailsDTO {
@@ -17,25 +16,6 @@ public class DeductionDetailsDTO {
     // Deductions
     private int total_deduction;
     private int total_otherdeduction;
-
-    @OneToOne(mappedBy = "deductionDetailsDTO")
-    public SalaryDetailsDTO salaryDetailsDTO;
-
-
-     // On Customer class:
-
-    // @OneToOne(optional=false)
-    // @JoinColumn(
-    //     name="CUSTREC_ID", unique=true, nullable=false, updatable=false)
-    // public CustomerRecord getCustomerRecord() { return customerRecord; }
-
-    // // On CustomerRecord class:
-
-    // @OneToOne(optional=false, mappedBy="customerRecord")
-    // public Customer getCustomer() { return customer; }
-
-
-
 
 
     public int getId() {
@@ -56,11 +36,5 @@ public class DeductionDetailsDTO {
     public void setTotal_otherdeduction(int total_otherdeduction) {
         this.total_otherdeduction = total_otherdeduction;
     }
-    public SalaryDetailsDTO getSalaryDetailsDTO() {
-        return salaryDetailsDTO;
-    }
-    public void setSalaryDetailsDTO(SalaryDetailsDTO salaryDetailsDTO) {
-        this.salaryDetailsDTO = salaryDetailsDTO;
-    }
-
+   
 }
