@@ -12,54 +12,25 @@ public class DeductionDetailsDTO {
     private int  id;
 
     // Deductions
-    private int advance_payment;
-    private int damage_payment;
-
-    // Scheme Deduction
-    private int provident_fund;
+    private int total_deduction;
+    private int total_otherdeduction;
     public int getId() {
         return id;
     }
     public void setId(int id) {
         this.id = id;
     }
-    public int getAdvance_payment() {
-        return advance_payment;
+    public int getTotal_deduction() {
+        return total_deduction;
     }
-    public void setAdvance_payment(int advance_payment) {
-        this.advance_payment = advance_payment;
+    public void setTotal_deduction(int total_deduction) {
+        this.total_deduction = total_deduction;
     }
-    public int getDamage_payment() {
-        return damage_payment;
+    public int getTotal_otherdeduction() {
+        return total_otherdeduction;
     }
-    public void setDamage_payment(int damage_payment) {
-        this.damage_payment = damage_payment;
+    public void setTotal_otherdeduction(int total_otherdeduction) {
+        this.total_otherdeduction = total_otherdeduction;
     }
-    public int getProvident_fund() {
-        return provident_fund;
-    }
-    public void setProvident_fund(int provident_fund) {
-        this.provident_fund = provident_fund;
-    }
-    public int getEsi() {
-        return esi;
-    }
-    public void setEsi(int esi) {
-        this.esi = esi;
-    }
-    public int getProfessional_tax() {
-        return professional_tax;
-    }
-    public void setProfessional_tax(int professional_tax) {
-        this.professional_tax = professional_tax;
-    }
-    public int getWelfare_fund() {
-        return welfare_fund;
-    }
-    public void setWelfare_fund(int welfare_fund) {
-        this.welfare_fund = welfare_fund;
-    }
-    private int esi;
-    private int professional_tax;
-    private int welfare_fund;
+
 }

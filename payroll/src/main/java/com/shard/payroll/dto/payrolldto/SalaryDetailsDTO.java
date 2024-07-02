@@ -13,8 +13,15 @@ public class SalaryDetailsDTO {
     private int total_earnings;
     private int total_deductons;
     private int net_salary;
+    private String month;
     public int getId() {
         return id;
+    }
+    public String getMonth() {
+        return month;
+    }
+    public void setMonth(String month) {
+        this.month = month;
     }
     public void setId(int id) {
         this.id = id;
