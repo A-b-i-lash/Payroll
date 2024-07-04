@@ -19,6 +19,11 @@ public class SalaryDetailsDTO {
     private int net_salary;
     private String month;
 
+    private int employee_code ;
+
+
+
+    
     public int getId() {
         return id;
     }
@@ -48,6 +53,12 @@ public class SalaryDetailsDTO {
     }
     public void setMonth(String month) {
         this.month = month;
+    }
+    public int getEmployee_code() {
+        return employee_code;
+    }
+    public void setEmployee_code(int employee_code) {
+        this.employee_code = employee_code;
     }
 
     
