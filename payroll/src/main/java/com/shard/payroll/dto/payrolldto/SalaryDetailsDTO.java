@@ -21,9 +21,9 @@ public class SalaryDetailsDTO {
 
     private int employee_code ;
 
-
-
     
+
+
     public int getId() {
         return id;
     }
